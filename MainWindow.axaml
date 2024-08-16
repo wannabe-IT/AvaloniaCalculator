@@ -1,0 +1,60 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="800"
+        x:Class="AvaloniaCalc.MainWindow"
+        Title="Calculator">
+        
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <!-- První řádek: TextBlock pro výpis výsledku -->
+        <TextBlock x:Name="DisplayBlock" Grid.ColumnSpan="5" FontSize="30" HorizontalAlignment="Right" Margin="5">0</TextBlock>
+        <Button Grid.Row="1" Grid.Column="0" Margin="5" FontSize="24" Content="C" Click="ResetButton"></Button>
+        <Button Grid.Row="1" Grid.Column="1" Margin="5" FontSize="19" Content="+/-" Click="PlusMinusButton"></Button>
+        <Button Grid.Row="1" Grid.Column="2" Margin="5" FontSize="19" Content="Del" Click="DelLastNum"></Button>
+
+
+        
+        <!-- První řádek tlačítek -->
+        
+        <Button Grid.Row="2" Grid.Column="0" Margin="5" FontSize="24" Content="7" Click="Seven"></Button>
+        <Button Grid.Row="2" Grid.Column="1" Margin="5" FontSize="24" Content="8" Click="Eight"></Button>
+        <Button Grid.Row="2" Grid.Column="2" Margin="5" FontSize="24" Content="9" Click="Nine"></Button>
+        <Button Grid.Row="2" Grid.Column="3" Margin="5" FontSize="24" Content="/" Click="Deleno"></Button>
+
+        <!-- Druhý řádek tlačítek -->
+        <Button Grid.Row="3" Grid.Column="0" Margin="5" FontSize="24" Content="4" Click="Four"></Button>
+        <Button Grid.Row="3" Grid.Column="1" Margin="5" FontSize="24" Content="5" Click="Five"></Button>
+        <Button Grid.Row="3" Grid.Column="2" Margin="5" FontSize="24" Content="6" Click="Six"></Button>
+        <Button Grid.Row="3" Grid.Column="3" Margin="5" FontSize="24" Content="*" Click="Krat"></Button>
+
+        <!-- Třetí řádek tlačítek -->
+        <Button Grid.Row="4" Grid.Column="0" Margin="5" FontSize="24" Content="1" Click="One"></Button>
+        <Button Grid.Row="4" Grid.Column="1" Margin="5" FontSize="24" Content="2" Click="Two"></Button>
+        <Button Grid.Row="4" Grid.Column="2" Margin="5" FontSize="24" Content="3" Click="Three"></Button>
+        <Button Grid.Row="4" Grid.Column="3" Margin="5" FontSize="24" Content="-" Click="Minus"></Button>
+
+        <!-- Čtvrtý řádek tlačítek -->
+        <Button Grid.Row="5" Grid.Column="0" Margin="5" FontSize="24" Content="0" Click="Zero"></Button>
+        <Button Grid.Row="5" Grid.Column="1" Margin="5" FontSize="23" Content=" . " Click="Desetinna"></Button>
+        <Button Grid.Row="5" Grid.Column="2" Margin="5" FontSize="24" Content="=" Click="Rovnase"></Button>
+        <Button Grid.Row="5" Grid.Column="3" Margin="5" FontSize="24" Content="+" Click="Plus"></Button>
+        
+    </Grid>
+</Window>
